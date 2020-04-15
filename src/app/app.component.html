@@ -4,4 +4,21 @@
   <br>
   {{"Contoh menulis di angular"}}
   25 + 25 = {{25+25}}
+
+  <input [(ngModel)]="a" type="text">
+  {{a}}
+
+  <br>
+  <br>
+
+  <input [(ngModel)]="varA" type="text"> *
+  <input [(ngModel)]="varB" type="text"> =
+  {{varA*varB}}
+
+  <br>
+
 </p>
+
+<div *ngFor = "let buah of item; let i = index">
+   {{i+1}}. {{buah.nama}} - {{buah.harga | currency:'Rp. '}}
+</div>
