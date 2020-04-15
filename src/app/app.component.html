@@ -22,3 +22,30 @@
 <div *ngFor = "let buah of item; let i = index">
    {{i+1}}. {{buah.nama}} - {{buah.harga | currency:'Rp. '}}
 </div>
+
+<div *ngFor="let data of itemArr">
+ {{data}}
+</div>
+
+<p *ngIf="show">Tampilkan jika show = true</p>
+
+<ng-template
+  *ngIf = "show; then showBlock; else notShowBlock">
+</ng-template>
+
+<ng-template #showBlock>
+  <p>
+    Show this only if show is true
+  </p>
+</ng-template>
+
+<ng-template #notShowBlock>
+  <p>
+    Show this only if show is not true
+  </p>
+</ng-template>
+
+<p>
+  <button (click)="klikButton()">Tekan</button>
+  {{pesan}}
+</p>
